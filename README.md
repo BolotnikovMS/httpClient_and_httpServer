@@ -24,6 +24,7 @@ public class Output {
   public decimal[] SortedInputs { get; set; }  
 }  
 где SumResult сумма всех чисел из массива Sums входного объекта, умноженная на коэффициент K MulResult произведение всех чисел из массива Muls входного обекта SortedInputs отсортированные числа из полей Sums, Muls входного объекта.  
+
 Пример объектов в Json  
 {"K":10,"Sums":[1.01,2.02],"Muls":[1,4]}  
 {"SumResult":30.30,"MulResult":4,"SortedInputs":[1.0,1.01,2.02,4.0]}
@@ -42,14 +43,16 @@ public class Output {
 /Stop  
 С помощью этого метода сервер должен безопасно закончить свою работу, тем самым закончив исполнение программы решения участника.  
 Задача считается решенной, если решение участника отработало без исключений, и сервер корректно обработал все запросы. Сервер должен быть отказоустойчив.  
-public class Input {
-public int K { get; set; }
-public decimal[] Sums { get; set; } public int[] Muls { get; set; }
-}
-public class Output {
-public decimal SumResult { get; set; } public int MulResult { get; set; }
-public decimal[] SortedInputs { get; set;
-}
+public class Input {  
+public int K { get; set; }  
+public decimal[] Sums { get; set; } public int[] Muls { get; set; }  
+}  
+public class Output {  
+public decimal SumResult { get; set; } public int MulResult { get; set; }  
+public decimal[] SortedInputs { get; set;}  
+}  
 где SumResult сумма всех чисел из массива Sums входного объекта, умноженная на коэффициент K MulResult произведение всех чисел из массива Muls входного обекта SortedInputs отсортированные числа из полей Sums, Muls входного объекта.   
-Пример объектов в Json
-{"K":10,"Sums":[1.01,2.02],"Muls":[1,4]} {"SumResult":30.30,"MulResult":4,"SortedInputs":[1.0,1.01,2.02,4.0]}
+
+Пример объектов в Json  
+{"K":10,"Sums":[1.01,2.02],"Muls":[1,4]}  
+{"SumResult":30.30,"MulResult":4,"SortedInputs":[1.0,1.01,2.02,4.0]}
